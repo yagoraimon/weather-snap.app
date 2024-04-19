@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherSnap</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="weather__header">
+      <form class="weather__search">
+        <input type="text" placeholder="Pesquise uma cidade..." class="weather__searchform">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+      <div class="weather__units">
+        <span class="weather__unit_celsius">&#176C</span>
+        <span class="weather__unit_farenheit">&#176F</span>
+      </div>
+    </div>
+    <div class="weather__body">
+      <h1 class="weather__city">Recife, Brasil</h1>
+      <div class="weather__datetime">
+        <p>Sexta-feira, 19 de abril de 2024 às 12:44 PM</p>
+      </div>
+      <div class="weather__forecast">
+        <p>Alguma Nuvens</p>
+      </div>
+      <div class="weather__icon">
+        <img src="http://openweathermap.org/img/wn/10d@4x.png"/>
+      </div>
+      <p class="weather__temperature">
+        26&#176
+      </p>
+      <div class="weather__minmax">
+        <p>Min: 23&#176</p>
+        <p>Max: 29&#176</p>
+      </div>
+    </div>
+
+    <div class="weather__info">
+      <div class="weather__card">
+        <i class="fa-solid fa-temperature-full"></i>
+        <div class="">
+          <p>Sensação Tér.</p>
+          <p class="weather__realfeel">26&#176</p>
+        </div>
+      </div>
+      <div class="weather__card">
+        <i class="fa-solid fa-droplet"></i>
+        <div class="">
+          <p>Umidade</p>
+          <p class="weather__humidity">26&#176</p>
+        </div>
+      </div>
+      <div class="weather__card">
+        <i class="fa-solid fa-wind"></i>
+        <div class="">
+          <p>Vento</p>
+          <p class="weather__wind">26&#176</p>
+        </div>
+      </div>
+      <div class="weather__card">
+        <i class="fa-solid fa-gauge-high"></i>
+        <div class="">
+          <p>Pressão</p>
+          <p class="weather__pressure">26&#176</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/32d7fe5332.js" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
