@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Inicializações e definições de variáveis
   let currCity = "Recife"
   let units = "metric"
@@ -96,4 +96,4 @@ document.addEventListener('DOMContentLoaded', function() {
       })
   }
 
-});
+})
