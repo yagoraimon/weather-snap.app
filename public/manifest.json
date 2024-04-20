@@ -3,7 +3,7 @@
   "dir": "ltr",
   "display": "fullscreen",
   "name": "Weather Snap",
-  "orientation": "any",
+  "orientation": "portrait",
   "scope": "/weather-snap-yr.netlify.app/",
   "short_name": "Weather Snap",
   "start_url": "/weather-snap-yr.netlify.app/",

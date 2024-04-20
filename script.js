@@ -17,6 +17,42 @@ document.addEventListener("DOMContentLoaded", function () {
   const celsiusButton = document.querySelector(".weather__unit_celsius")
   const fahrenheitButton = document.querySelector(".weather__unit_farenheit")
 
+
+  // Geolocalização via hardware
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        // Convertendo a latitude e longitude em nome da cidade usando uma API OpenWeatherMap
+        fetch(
+          `https://api.openweathermap.org/geo/1.0/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&limit=1&appid=64f60853740a1ee3ba20d0fb595c97d5`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            currCity = data[0].name // Define o nome da cidade chamada
+            getWeather()
+          })
+          .catch((error) =>
+            console.error(
+              "Erro ao converter geolocalização para cidade:",
+              error
+            )
+          )
+      },
+      function (error) {
+        // Chamada para carregar os dados de clima baseados na localização por IP
+        fetch("https://ipapi.co/json/")
+          .then((response) => response.json())
+          .then((jsonData) => {
+            currCity = jsonData.city
+            getWeather()
+          })
+      }
+    )
+  } else {
+    alert("Geolocalização não está disponível em seu navegador.")
+    
+  }
+
   // Event listener para o formulário de busca
   form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -50,14 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
         fahrenheitButton.classList.add("weather__unit_active")
         celsiusButton.classList.remove("weather__unit_active")
       }
-    })
-
-  // Chamada inicial para carregar os dados de clima baseados na localização por IP
-  fetch("https://ipapi.co/json/")
-    .then((response) => response.json())
-    .then((jsonData) => {
-      currCity = jsonData.city
-      getWeather()
     })
 
   function getWeather() {
