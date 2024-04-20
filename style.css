@@ -16,6 +16,8 @@ body {
 
   display: grid;
   place-content: center;
+
+  overflow-x: hidden;
 }
 
 .container {
@@ -155,7 +157,9 @@ input::placeholder {
 /* reponsive properties (tablets) */
 @media (max-width: 936px) {
   .container {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
   }
 
   .weather__header {
@@ -163,11 +167,19 @@ input::placeholder {
   }
 
   .weather__units {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 }
 /* reponsive properties (smartphones) */
-@media (max-width: 400px) {
+@media (max-width: 360px) {
+  body {
+    place-content: start center;
+  }
+  .container {
+    height: 100%;
+    border-radius: 0;
+  }
+  
   .weather__info {
     grid-template-columns: 1fr;
   }
