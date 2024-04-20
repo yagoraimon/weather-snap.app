@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeatherSnap</title>
-  <link rel="shortcut icon" href="AppIcons\icon-192x192.png" type="image/png">
-
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="public/manifest.json">
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/32d7fe5332.js" crossorigin="anonymous"></script>
-  
+
 </head>
 <body>
   <div class="container">
@@ -75,6 +76,12 @@
     </div>
   </div>
   
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('public/service-worker.js')
+    }
+  </script>
+
   <script src="./script.js"></script>
 </body>
 </html>
