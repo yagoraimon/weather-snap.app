@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     weatherTemperature.innerHTML = `${data.main.temp.toFixed()}${
       units === "imperial" ? "&#176F" : "&#176C"
     }`
-    weatherIcon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" />`
+    weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" />`
     weatherMinMax.innerHTML = `<p>Min: ${data.main.temp_min.toFixed()}${
       units === "imperial" ? "&#176F" : "&#176C"
     }</p><p>Max: ${data.main.temp_max.toFixed()}${
