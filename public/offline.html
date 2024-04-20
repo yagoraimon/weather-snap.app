@@ -13,7 +13,7 @@
     display: relative;
     margin: 0;
     padding: 0;
-    background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+    background-color: #22254C;
   }
   .wrapper {
     position: absolute;
@@ -47,13 +47,17 @@
     display: block;
     margin: 20px 0 0;
     padding: 15px 30px;
-    background: #22254C;
+    background: #454eb1;
     color: white;
     font-family: arial;
     letter-spacing: 5px;
     border-radius: .4rem;
     text-decoration: none;
-    box-shadow: 0 0 15px #22254C;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #454eb1;
   }
   </style>
 
@@ -61,9 +65,9 @@
 <body>
     <div class="wrapper">
     <h1>OFFLINE</h1>
-    <h4>Please check your internet connection</h4>
+    <h4>Por favor, confira a sua conexão com a internet</h4>
 
-    <a href="index.html" class="button">RETRY</a>
+    <a href="../index.html" class="button">ATUALIZAR</a>
   </div>
 </body>
 </html>
