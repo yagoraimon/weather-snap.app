@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const weatherWind = document.querySelector(".weather__wind")
   const weatherPressure = document.querySelector(".weather__pressure")
 
+  const celsiusButton = document.querySelector(".weather__unit_celsius")
+  const fahrenheitButton = document.querySelector(".weather__unit_farenheit")
+
   // Event listener para o formulário de busca
   form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -33,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (units !== "metric") {
         units = "metric"
         getWeather()
+        celsiusButton.classList.add("weather__unit_active")
+        fahrenheitButton.classList.remove("weather__unit_active")
       }
     })
 
@@ -42,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (units !== "imperial") {
         units = "imperial"
         getWeather()
+        fahrenheitButton.classList.add("weather__unit_active")
+        celsiusButton.classList.remove("weather__unit_active")
       }
     })
 
