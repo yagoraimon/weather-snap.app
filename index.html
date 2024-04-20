@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeatherSnap</title>
-  <link rel="shortcut icon" href="AppIcons\Assets.xcassets\AppIcon.appiconset\_\100.png" type="image/x-icon">
+  <link rel="shortcut icon" href="AppIcons\icon-192x192.png" type="image/png">
 
   <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/32d7fe5332.js" crossorigin="anonymous"></script>
+  
 </head>
 <body>
   <div class="container">
@@ -24,20 +26,20 @@
     <div class="weather__body">
       <h1 class="weather__city">Recife, Brasil</h1>
       <div class="weather__datetime">
-        <p>Sexta-feira, 19 de abril de 2024 às 12:44 PM</p>
+        <p>Sexta-feira, 19 de abril de 2024 às 12:44</p>
       </div>
       <div class="weather__forecast">
         <p>Alguma Nuvens</p>
       </div>
       <div class="weather__icon">
-        <img src="http://openweathermap.org/img/wn/10d@4x.png"/>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png"/>
       </div>
       <p class="weather__temperature">
         26&#176
       </p>
       <div class="weather__minmax">
-        <p>Min: 23&#176</p>
-        <p>Max: 29&#176</p>
+        <p>Min: 23&#176C</p>
+        <p>Max: 29&#176C</p>
       </div>
     </div>
 
@@ -46,34 +48,33 @@
         <i class="fa-solid fa-temperature-full"></i>
         <div class="">
           <p>Sensação Tér.</p>
-          <p class="weather__realfeel">26&#176</p>
+          <p class="weather__realfeel">&#176C</p>
         </div>
       </div>
       <div class="weather__card">
         <i class="fa-solid fa-droplet"></i>
         <div class="">
           <p>Umidade</p>
-          <p class="weather__humidity">26&#176</p>
+          <p class="weather__humidity">%</p>
         </div>
       </div>
       <div class="weather__card">
         <i class="fa-solid fa-wind"></i>
         <div class="">
           <p>Vento</p>
-          <p class="weather__wind">26&#176</p>
+          <p class="weather__wind">m/s</p>
         </div>
       </div>
       <div class="weather__card">
         <i class="fa-solid fa-gauge-high"></i>
         <div class="">
           <p>Pressão</p>
-          <p class="weather__pressure">26&#176</p>
+          <p class="weather__pressure">hPa</p>
         </div>
       </div>
     </div>
   </div>
-
-  <script src="https://kit.fontawesome.com/32d7fe5332.js" crossorigin="anonymous"></script>
+  
   <script src="./script.js"></script>
 </body>
 </html>

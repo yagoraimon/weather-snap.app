@@ -55,33 +55,6 @@ input::placeholder {
   color: #fff;
 }
 
-.search-results {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background: white;
-  color: black;
-  border-radius: 0 0 4px 4px;
-  overflow: hidden;
-  display: none; /* Esconder inicialmente */
-}
-
-.search-results.active {
-  display: block; /* Mostrar quando houver sugestões */
-}
-
-.search-results p {
-  padding: 10px;
-  margin: 0;
-  cursor: pointer;
-}
-
-.search-results p:hover {
-  background-color: #f0f0f0;
-}
-
 .weather__units {
   font-size: 1.5rem;
   display: flex;
@@ -111,6 +84,10 @@ input::placeholder {
 .weather__datetime {
   margin-bottom: 2rem;
   font-size: 14px;
+}
+
+.weather__datetime::first-letter {
+  text-transform: capitalize;
 }
 
 .weather__forecast {
